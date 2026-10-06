@@ -230,6 +230,14 @@ continew-starter.tenant:
     - sys_sms_log # 短信日志表
     - sys_client # 客户端表
     - sys_app # 应用表
+    # ComfyUI 业务表（按 user_id 隔离，不参与租户隔离）
+    - comfy_instance
+    - comfy_workflow
+    - comfy_schedule
+    - comfy_task_batch
+    - comfy_task
+    - comfy_task_attempt
+    - comfy_task_output
   # 忽略菜单 ID（租户不能使用的菜单）
   ignore-menus:
     - 1050 # 菜单管理
